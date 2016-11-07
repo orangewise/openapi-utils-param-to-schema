@@ -1,7 +1,7 @@
 {
   "name": "openapi-utils-param-to-schema",
   "version": "0.0.4",
-  "description": "Create a schema from a openapi param definition",
+  "description": "Create a schema from a openapi param",
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js"
