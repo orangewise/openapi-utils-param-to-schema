@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/orangewise/openapi-utils-param-to-schema#readme",
   "devDependencies": {
-    "tape": "^4.6.2"
+    "tape": "^4.6.2",
+    "z-schema": "^3.18.0"
   }
 }
