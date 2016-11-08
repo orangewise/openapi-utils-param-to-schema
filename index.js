@@ -6,7 +6,7 @@ exports.paramToSchema = function (param) {
   if (param.pattern) properties[param.name]['pattern'] = param.pattern;
 
   var schema = {};
-  schema.required = [param.name];
+  if (param.required) schema.required = [param.name];
   schema.properties = properties;
 
   return schema;

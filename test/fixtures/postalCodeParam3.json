@@ -1,0 +1,6 @@
+{
+  "name": "postalCode",
+  "in": "query",
+  "type": "string",
+  "pattern": "^[1-9][0-9]{3} ?(?!sa|sd|ss)[A-Z]{2}$"
+}
