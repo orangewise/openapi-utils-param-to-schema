@@ -1,0 +1,7 @@
+{
+  "name": "postalCode",
+  "in": "body",
+  "schema": {
+    "$ref": "#/definitions/Postalcode"
+  }
+}

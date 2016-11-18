@@ -12,6 +12,7 @@ ZSchema = new ZSchema({
 var zip1 = require('./fixtures/postalCodeParam.json');
 var zip2 = require('./fixtures/postalCodeParam2.json');
 var zip3 = require('./fixtures/postalCodeParam3.json');
+var zip4 = require('./fixtures/postalCodeParam4.json');
 var zip1Schema = require('./fixtures/postalCodeSchema.json');
 var zip2Schema = require('./fixtures/postalCodeSchema2.json');
 var zip3Schema = require('./fixtures/postalCodeSchema3.json');
@@ -44,6 +45,13 @@ test('param with pattern, not required', function (t) {
   t.equal(ZSchema.validate({ postalCode: '1000XX' }, s), true, 'conforms to ' + JSON.stringify(s));
   t.equal(ZSchema.validate({ postalCode: '1000X' }, s), false, 'wrong pattern, does not conform to ' +JSON.stringify(s));
   t.equal(ZSchema.validate({ postalCod: '1' }, s), true, 'does conform to ' +JSON.stringify(s));
+  t.end();
+});
+
+test('param with schema', function (t) {
+  t.plan(1);
+  var s = u.paramToSchema(zip4);
+  t.deepEqual(s, { $ref: '#/definitions/Postalcode' }, 'schema should be returned');
   t.end();
 });
 
